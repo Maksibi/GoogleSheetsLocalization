@@ -1,0 +1,12 @@
+{
+  "name": "com.QT.QTLocalization",
+  "version": "0.0.1",
+  "displayName": "QtGoogleSheetsLocalization",
+  "description": "This is a package for parsing localization from google sheets to scriptable object",
+  "unity": "2022.3",
+  "author": {
+    "name": "MMM",
+    "email": "",
+    "url": ""
+  }
+}
