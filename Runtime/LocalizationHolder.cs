@@ -11,6 +11,7 @@ namespace QT.Localization
     [CreateAssetMenu(menuName = "", fileName = "LocaleHolder")]
     public class LocalizationHolder : ScriptableObject
     {
+        [SerializeField] private string apiKey = "";
         [SerializeField] private string SheetName = "";
         [SerializeField] private string SheetsID = "";
         
@@ -23,7 +24,7 @@ namespace QT.Localization
 
             var _service = new SheetsService(new BaseClientService.Initializer
             {
-                ApiKey = "AIzaSyCHsDX-Eu4ufTsbfyqDfHD_B3moS_srZTw"
+                ApiKey = apiKey
             });
 
             Debug.Log($"Starting download sheet (${SheetName})...");
