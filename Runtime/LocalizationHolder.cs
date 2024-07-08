@@ -11,8 +11,8 @@ namespace QT.Localization
     [CreateAssetMenu(menuName = "", fileName = "LocaleHolder")]
     public class LocalizationHolder : ScriptableObject
     {
-        [SerializeField] private string SheetName = "Translate";
-        [SerializeField] private string SheetsID = "1pxpdbDExLmEoA733KU7VHn-sWKHo35NksFdFq0lHgP4";
+        [SerializeField] private string SheetName = "";
+        [SerializeField] private string SheetsID = "";
         
         [SerializeField] public List<LocalizationValues> Values = new();
 
