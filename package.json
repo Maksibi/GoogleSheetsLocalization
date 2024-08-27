@@ -1,6 +1,6 @@
 {
   "name": "com.maksibi.googlesheetslocalization",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "displayName": "GoogleSheetsLocalization",
   "description": "This is a package for parsing localization from google sheets to scriptable object",
   "unity": "2022.3",
