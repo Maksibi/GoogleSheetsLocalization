@@ -4,28 +4,31 @@ using System.Collections.Generic;
 using QT.Localization;
 using UnityEngine;
 
-public class LocalizationSingleton : MonoBehaviour
+namespace QT.Localization
 {
-	[SerializeField] private LocalizationHolder localizationHolder;
-
-	public static LocalizationSingleton Instance;
-
-	public Dictionary<string, string> CurrentLocalization { get; private set; }
-
-	private void Awake()
+	public class LocalizationSingleton : MonoBehaviour
 	{
-		if (Instance != null)
+		[SerializeField] private LocalizationHolder localizationHolder;
+
+		public static LocalizationSingleton Instance;
+
+		public Dictionary<string, string> CurrentLocalization { get; private set; }
+
+		private void Awake()
 		{
-			Destroy(gameObject);
-			return;
+			if (Instance != null)
+			{
+				Destroy(gameObject);
+				return;
+			}
+
+			Instance = this;
+			DontDestroyOnLoad(gameObject);
 		}
 
-		Instance = this;
-		DontDestroyOnLoad(gameObject);
-	}
-
-	public void Init(string lang)
-	{
-		CurrentLocalization = localizationHolder.LocalizationTable[lang];
+		public void Init(string lang)
+		{
+			CurrentLocalization = localizationHolder.LocalizationTable[lang];
+		}
 	}
 }
