@@ -11,7 +11,7 @@
   ![GoogleApi](Images~/GoogleApi.png)
 ### 3. Install [GoogleSheetsLocalization] via UPM:
     https://github.com/Maksibi/GoogleSheetsLocalization.git
-## Usage
+## Setup
 ### 1. Create LocalizationHolder ScriptableObject
   - `Assets` > `Create` > `LocalizationHolder`
 ### 2. Fill out your information in LocalizationHolder
@@ -29,8 +29,10 @@
   - Fill your Keys and LocalizationValues according to layout of the table
 ### 4. Download localization
   - Open context menu of LocalizationHolder and press DownloadLocalization
-### 5. Use localization
-  - Example usage:
+
+## Usage
+- One way of using this package is a built in LocalizationSingleton and LocalizedText. Place LocalizationSingleton in first scene of project, call Init with lang code and place LocalizedText on every text you want to localize    
     ```
-      localizationHolder.Values.First(x => x.i18n == "en").First(x => x.Key == "CoinsTextKey");
+        LocalizationSingleton.Instance.CurrentLocalization["YourLocalizationKey"];
     ```
+- Another way of using is accessing LocalizationHolder's Dictionary with all localizations, this way you can swap languages or localization tables with ease.
