@@ -14,9 +14,7 @@ namespace QT.Localization
 		[SerializeField] private TMP_Text tmpText;
 		[SerializeField] private Text legacyText;
 		[SerializeField] private string key;
-
-		private static LocalizationHolder localizationHolder;
-
+  
 		private const string ValuePlaceHolder = "\\{n\\}";
 		private string locale;
 
@@ -44,9 +42,6 @@ namespace QT.Localization
 
 		private void Awake()
 		{
-			if (localizationHolder == null)
-				localizationHolder = Resources.Load<LocalizationHolder>("LocaleHolder");
-
 			locale = LocalizationSingleton.Instance.CurrentLocalization[key];
 
 			ChangeText(locale);
