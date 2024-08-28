@@ -16,7 +16,10 @@ namespace QT.Localization
 		[SerializeField] private string key;
   
 		private const string ValuePlaceHolder = "\\{n\\}";
-		private string locale;
+  
+		private string Locale => LocalizationSingleton.Instance.CurrentLocalization[key];
+
+		private bool textChanged;
 
 		#if UNITY_EDITOR
 		private void OnValidate()
@@ -42,9 +45,8 @@ namespace QT.Localization
 
 		private void Awake()
 		{
-			locale = LocalizationSingleton.Instance.CurrentLocalization[key];
-
-			ChangeText(locale);
+			if(!textChanged)
+				ChangeText(Locale);
 		}
 
 		private void ChangeText(string text)
@@ -57,10 +59,11 @@ namespace QT.Localization
 
 		public void SetValue(string value)
 		{
-			if (!locale.Contains(ValuePlaceHolder))
-				throw new Exception($"No placeholder for values in locale: {locale}");
+			if (!Locale.Contains(ValuePlaceHolder))
+				throw new Exception($"No placeholder for values in locale: {Locale}");
 
-			ChangeText(locale.Replace(ValuePlaceHolder, value));
+			ChangeText(Locale.Replace(ValuePlaceHolder, value));
+			textChanged = true;
 		}
 	}
 }
