@@ -6,7 +6,7 @@
   - For older versions see [NuGetForUnity](https://github.com/GlitchEnzo/NuGetForUnity) Repo
 ### 2. Install Google API packages via NuGet:
   - Open `NuGet` > `Manage NuGet Package`
-  - Install `Google.Apis` and `Google.Apis.Sheets.v4`
+  - Install `Google.Apis.Sheets.v4`
   <br><br>
   ![GoogleApi](Images~/GoogleApi.png)
 ### 3. Install [GoogleSheetsLocalization] via UPM:
