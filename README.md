@@ -9,7 +9,7 @@
   - Install `Google.Apis.Sheets.v4`
   <br><br>
   ![GoogleApi](Images~/GoogleApi.png)
-### 3. Install [GoogleSheetsLocalization] via UPM:
+### 3. Install GoogleSheetsLocalization via UPM:
     https://github.com/Maksibi/GoogleSheetsLocalization.git
 ## Setup
 ### 1. Create LocalizationHolder ScriptableObject
