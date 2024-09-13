@@ -57,12 +57,15 @@ namespace QT.Localization
 				legacyText.text = text;
 		}
 
-		public void SetValue(string value)
+		public void SetValue(object value)
 		{
-			if (!Locale.Contains(ValuePlaceHolder))
-				throw new Exception($"No placeholder for values in locale: {Locale}");
+			ChangeText(string.Format(Locale, value));
+			textChanged = true;
+		}
 
-			ChangeText(Locale.Replace(ValuePlaceHolder, value));
+		public void SetValue(object[] values)
+		{
+			ChangeText(string.Format(Locale, values));
 			textChanged = true;
 		}
 	}
