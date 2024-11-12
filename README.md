@@ -16,12 +16,12 @@
   - `Assets` > `Create` > `LocalizationHolder`
 ### 2. Fill out your information in LocalizationHolder
   - `Api Key` - your google sheets api key, you can find it [here](https://console.cloud.google.com/)
-  - `Sheet Name` - name of sheet in GoogleSheets, can be found at bottom of GoogleSheets
-  <br><br>
-  ![SheetName](Images~/SheetName.png)
   - `Sheets ID` - id of sheets in GoogleSheets, can be fount in URL of GoogleSheets
   <br><br>
   ![SheetId](Images~/SheetId.png)
+  - `Sheet Name` - name of sheet in GoogleSheets, can be found at bottom of GoogleSheets
+  <br><br>
+  ![SheetName](Images~/SheetName.png)
 ### 3. Setup your table
   - Your table should look like this:
   <br><br>
