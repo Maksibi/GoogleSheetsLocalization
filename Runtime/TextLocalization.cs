@@ -41,7 +41,7 @@ namespace QT.Localization
 		}
 		#endif
 
-		private void Awake()
+		private void Start()
 		{
 			if(!textChanged)
 				ChangeText(Locale);
